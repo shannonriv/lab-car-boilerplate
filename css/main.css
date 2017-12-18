@@ -1,1 +1,462 @@
-/* Los estilos de tu proyecto */
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+}
+.col-xs-12, .col-sm-12, .col-md-12 {
+  padding: 0;
+}
+.row {
+  margin: 0;
+}
+
+/* Reutilizables */
+.no-padding {
+  padding: 0;
+}
+.no-margin {
+  margin: 0;
+}
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+  .container-fluid > .navbar-header,
+  .container-fluid > .navbar-collapse {
+    margin: 0;
+  }
+  .navbar-header button {
+    float: left;
+  }
+  .navbar-default {
+    border: none;
+    background-color: #ffffff;
+  }
+  .navbar-brand {
+    margin: 6% 15%;
+  }
+  .navbar-collapse.in {
+    overflow-y: hidden;
+  }
+  .navbar-nav li:hover {
+    background-color: #e7e7e7;
+  }
+  .bg-header {
+    background-image: url('../assets/images/taxi.jpg');
+    height: 500px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25% 0;
+  }
+  .overlay-desktop {
+    display: none;
+  }
+  .overlay-mobile {
+    background-color: #ffc107;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 0.8;
+    padding: 1em; 
+  }
+  .overlay img {
+    height: 18px;
+    width: 65px;
+    margin: 0 1rem;
+  }
+  .btn-download {
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-top: 4rem;
+  }
+  .contain-app {
+    padding: 10% 3% 0;
+    background-color: #ffc107;
+  }
+  .contain-app p {
+    font-size: 1.8rem;
+    margin-top: 8%;
+  }
+  .app-info {
+    border: 1px solid #ffffff;
+    font-weight: 900;  
+    padding: 7% 15%;
+  }
+  .driver {
+    background-image: url('../assets/images/conduce.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .overlay2 {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 8rem 4rem 20rem;
+  }
+  .overlay2 p {
+    font-size: 1.8rem;
+  }
+  .btn-join {
+    background-color: #ffc107;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 2% 3%;
+  }
+  .rates {
+    background-color: #ffc107;
+    padding: 10% 3%;  
+  }
+  .rates p {
+    font-size: 1.8rem;
+  }
+  .modif {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: inline-block;  
+    color: #ffffff;
+    margin: 3% 4%;
+    padding: 3% 2%;
+    width: 70%;
+  }
+  .search-btn {
+    border: none;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 15%;
+    margin-top: 5%;
+    padding: 2% 4%;
+  }
+  .map-contain {
+    border: 1px solid #ffffff;
+    padding: 2%;
+  }
+  #map {
+    height: 250px;
+    width: 100%;
+  }
+  footer {
+    background-color: #262a2c;
+  }
+  .logo-footer {
+    padding: 2% 3%;
+  }
+  hr {
+    margin-top: 0;
+    width: 95%;
+  }
+  .social-media a,
+  .links-sections a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .social-media a:hover,
+  .links-sections a:hover{
+    color: #ffc107;
+  }
+  h5 {
+    margin-bottom: 9%;
+  }
+  .modif-media {
+    margin-right: 4%;
+    margin-bottom: 10%;
+  }
+  .stores {
+    padding: 3% 2%;
+  }
+  .stores img {
+    margin-bottom: 6%;
+  }
+  footer p {
+    padding: 0 3%;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile {
+    display: none;
+  }
+  .navbar-default {
+    background-color: #ffffff;
+    border: none;
+    margin: 3% 5% 3% 8%;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: black;
+  }
+  .navbar-nav {
+    float: right;
+  }
+  .navbar-nav li:hover {
+    background-color: #e7e7e7;
+  }
+  .overlay-mobile {
+    display: none;
+  }
+  .bg-header {
+    background-image: url('../assets/images/taxi.jpg');
+    height: 580px;
+    background-position: 0 93%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12% 0;
+  }
+  .overlay-desktop {
+    background-color: #ffc107;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: 1px;
+    padding: 1em; 
+  }
+  .overlay-desktop img {
+    height: 15px;
+    width: 65px;
+    margin: 0 1rem;
+  }
+  .small {
+    font-size: 60%;
+    padding-top: 10%;
+  }
+  .btn-download {
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-top: 2%;
+  }
+  .above {
+    background-color: #ffc107;
+    font-size: 1.1rem;
+    margin-left: 30%;
+    position: relative;
+    top: -5px;
+    width: 40%;
+    z-index: 2;    
+  }
+  .below {
+    margin-bottom: 30px;
+    position: relative;
+    top: 30px;
+    width: 90%;   
+    z-index: 1;
+  }
+  .contain-app {
+    background-color: #ffc107;
+    padding: 3% 0;
+    padding-left: 0;
+  }
+  .app-info {
+    border: 1px solid #ffffff;
+    border-left: none;
+    padding: 3% 5%;
+  }
+  .app-info img {
+    height: 300px;
+    width: 300px;
+  }
+  .info {
+    margin-left: 10%;
+  }
+  .info p {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+  .driver {
+    background-image: url('../assets/images/conduce.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .overlay2 {
+    background: rgba(0, 0, 0, 0.6);
+    float: right;
+    padding: 6% 3% 15%;
+  }
+  .overlay2 p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  .btn-join {
+    background-color: #ffc107;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 2% 3%;
+  }
+  .rates {
+    background-color: #ffc107;
+    padding: 4% 10%;  
+  }
+  .rates h4 {
+    margin-top: 10%;
+
+  }
+  .rates p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  .modif {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: inline-block;  
+    color: #ffffff;
+    margin: 3% 4%;
+    padding: 3% 2%;
+    width: 70%;
+  }
+  .search-btn {
+    border: none;
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-top: 5%;
+    padding: 2% 4%;
+  }
+  .map-contain {
+    border: 1px solid #ffffff;
+    padding: 1%;
+  }
+  #map {
+    height: 350px;
+    width: 100%;
+  }
+  footer {
+    background-color: #262a2c;
+    padding: 5% 10%;
+  }
+  hr {
+    margin: 3% 0;
+    width: 100%;
+  }
+  .col-md-3 {
+    padding: 0;
+  }
+  .stores-group,
+  .social-media {
+    position: relative;
+    height: 270px;
+  }
+  .stores,
+  .media {
+    position: absolute;
+    bottom: 0;
+  }
+  .social-media a,
+  .links-sections a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .social-media a:hover,
+  .links-sections a:hover{
+    color: #ffc107;
+  }
+  h5 {
+    margin-bottom: 9%;
+  }
+  .modif-media {
+    margin-right: 4%;
+  }
+  .stores img {
+    margin-bottom: 6%;
+    width: 60%;
+  }
+}
+
+/* Modal Login */
+.modal-content {
+  background-color: rgb(7,202,202);  
+}
+.modal-header, .close {
+  text-align: center;
+}
+.modal-header {
+  border-bottom: 1px solid #ffffff;
+}
+.modal-header img {
+  height: 200px;
+  width: 200px;
+}
+.modal-body {
+  background-color: #e7e7e7;
+  margin: 5% auto;
+  padding: 3%;
+  width: 50%;
+}
+.input-group,
+.btn-warning {
+  margin-bottom: 5%;
+}
+.black-p {
+  color: #262a2c!important;
+}
+.black-p a {
+  text-decoration: none;
+  color: red;
+}
+
+/* Modal Register */
+.modal-content2 {
+  background-color: #929090;
+  border-radius: 15px;
+  padding: 6% 4%;
+  width: 60%;
+}
+.modal-body2 .btn-black {
+  background-color: black;
+  width: 100%
+}
+.input-group .form-control.mod {
+  width: 50%;
+}
+.input-group2 .form-control {
+  margin-bottom: 5%;
+}
+.btn-gray {
+  background-color: #b3b2b2;
+  color: initial;
+  width: 100%;
+}
+.btn-skyblue {
+  background-color: rgb(7, 189, 202);
+  margin-top: 5%;
+  width: 100%;
+}
+
+/* Modal Driver */
+.modal-content3 {
+  background-color: #a09d9d;
+  border-radius: 15px;
+  padding: 6% 4%;  
+  width: 70%;
+}
+.modal-body3 button {
+  margin-bottom: 3%;
+  text-align: left;
+}
+.btn-group {
+  width: 100%;
+}
+.mod-width {
+  width: 100%;
+}
+.modal-body3 {
+  color: initial;
+}
+.marca-p {
+  color: rgb(104, 102, 102);
+  font-size: 1.2rem;
+}
+.marca-p span {
+  color: rgb(20, 33, 150);
+}
